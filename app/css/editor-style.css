@@ -1,0 +1,258 @@
+/*
+Description: Tout ce qui est body, ul, h1...*/
+
+body {
+  font-family: Merriweather !important;
+  background: url(../images/bois-vosgiens.jpg) no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 12px 0;
+}
+
+h5 {
+  font-size: 14px;
+  color: #696969;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+h2,
+h3,
+h5,
+h6 {
+  margin: 10px 0;
+}
+
+ol,
+ul {
+  padding-left: 20px;
+}
+
+dt {
+  font-weight: 600;
+}
+dd {
+  margin-left: 0;
+}
+
+code {
+  padding: 2px 4px;
+  color: #c7254e;
+  background-color: #f9f2f4;
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eee;
+}
+
+table {
+  width: 100%;
+  vertical-align: middle;
+  border-spacing: 0;
+}
+caption {
+  font-style: italic;
+  margin-bottom: 19px;
+}
+
+tbody {
+  border-top: 1px solid white;
+}
+
+th {
+  font-weight: 500;
+  background-color: black;
+  border-top: 1px solid white;
+}
+
+th,
+td {
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  text-align: center;
+  padding: 4px 0;
+}
+
+th:last-child,
+td:last-child {
+  border-right: 1px solid white;
+}
+
+time {
+  text-transform: capitalize;
+}
+
+.comment-metadata time {
+  text-transform: none;
+  display: inline-block;
+}
+
+.comment-metadata time::first-letter {
+  text-transform: capitalize;
+}
+
+hr.clear {
+  border: none;
+  margin: 0;
+  height: 0;
+  clear: both;
+}
+
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a img {
+  display: block;
+}
+
+.alignleft {
+  float: left;
+  margin: 6px 28px 28px 0;
+}
+
+.alignright {
+  float: right;
+  margin: 6px 0 28px 28px;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto 28px;
+}
+
+a {
+  color: #ffc975;
+  text-decoration: none;
+}
+
+.entry-title a {
+  color: #fffdf9;
+  font-size: 50px;
+}
+
+/*paragraphes : hormis sur les pages simples et les articles entiers, deux paragraphes (non-comptabilisés comme
+premier ou dernier enfants) : l'extrait et le readmore*/
+p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.page p,
+.single p {
+  margin: 14px 0;
+}
+
+.page p:first-child,
+.single p:first-child {
+  margin-top: 0;
+}
+
+.single p:last-child {
+  margin-bottom: 0;
+}
+
+.comment-content p {
+  /*les paragraphes de commentaire */
+  margin-left: 34px;
+}
+
+@media (max-width: 991px) {
+  body {
+    margin: 0;
+    background: none;
+  }
+
+  p {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+
+  .entry-content p:first-child {
+    margin-bottom: 4%;
+  }
+
+  .single .entry-content p:first-child {
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    margin: 6px 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  h4,
+  h5 {
+    font-size: 18px;
+    margin: 31px 0;
+  }
+
+  h6 {
+    font-size: 16px;
+    margin: 15px 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 5%;
+  }
+
+  ol,
+  ul,
+  dl {
+    font-size: 22px;
+  }
+
+  code {
+    font-size: 90%;
+  }
+
+  blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee;
+  }
+}

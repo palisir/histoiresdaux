@@ -1,0 +1,195 @@
+/*
+ Theme Name:   Histoires Daux (WP2016 child)
+ Theme URI:    http://histoiredaux.fr/
+ Description:  Thème développé pour le site 'Histoires Daux'
+ Author:       Alisir
+ Template:     twentysixteen
+ Version:      0.1
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  histoiredaux
+*/
+
+@import url(./layout.css);
+@import url(./editor-style.css);
+@import url(./sidebar.css);
+
+@media (max-width: 320px) {
+  #body {
+    display: none;
+  }
+}
+
+#page {
+  color: #fffdf9;
+}
+
+#menu-navigation,
+#menu-navigation-footer {
+  list-style: none;
+}
+
+/*Header de post*/
+
+.entry-title {
+  color: #fffdf9;
+  margin-bottom: 10px;
+}
+
+.entry-header {
+  color: #ffc975;
+  font-size: 14px;
+}
+
+.cat-links {
+  margin-left: 10px;
+}
+
+.cat-links .screen-reader-text::before {
+  content: "•";
+}
+
+.cat-links .screen-reader-text::after {
+  content: ": ";
+}
+
+.post-edit-link {
+  color: #ababac;
+}
+
+/*contenu du post*/
+
+.centre-image {
+  text-align: center;
+}
+
+.more-link {
+  color: #901819;
+  font-weight: 700;
+  font-style: italic;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+.attachment-thumbnail {
+  margin: 5px 0 10px 0;
+}
+
+.post-entier {
+  background-color: #fffdf9;
+  color: #242321;
+}
+
+.single .post-entier {
+  padding-bottom: 28px;
+}
+
+.post-entier .addtoany_share_save_container {
+  margin: 15px 0 0 0;
+}
+.addtoany_share_save_container::before {
+  content: "Partager cet article :";
+  font-style: italic;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/*commentaires*/
+.comment-list,
+.children {
+  list-style-type: none;
+}
+
+.comments-title {
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.comment-metadata time {
+  color: #ffffff;
+}
+
+.reply a {
+  background-color: #ababac;
+  color: #000000;
+}
+
+.fn {
+  color: #ffc975;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*Navigation des articles*/
+
+.nav-links {
+  text-align: center;
+}
+
+.page-numbers {
+  color: #fffdf9;
+}
+.page-numbers.current {
+  color: #ffc975;
+}
+
+.prev {
+  float: left;
+  margin-left: 20px;
+}
+.next {
+  float: right;
+  margin-right: 20px;
+}
+
+/*footer*/
+
+.realisation {
+  color: #9d9d9d;
+}
+
+#colophon p:last-child {
+  margin-bottom: 0;
+}
+
+.menu-navigation-footer-container a {
+  color: #fffdf9;
+}
+
+.menu-navigation-footer-container li {
+  padding: 0;
+}
+
+/*boutons de partage de post*/
+
+#twitterbutton {
+  display: inline-block;
+}
+
+.histdaux-link {
+  height: 20px;
+  vertical-align: top;
+  background: url("../images/SocialShare.png") no-repeat;
+  display: inline-block;
+}
+
+.histdaux-twitter {
+  width: 61px;
+  background-position: 0px 0px;
+}
+
+.histdaux-twitter:hover,
+.histdaux-twitter:active {
+  background-position: -61px 0px;
+}
+
+.histdaux-facebook {
+  width: 72px;
+  background-position: -122px 0px;
+}
+
+.histdaux-googleplus {
+  width: 70px;
+  background-position: -194px 0px;
+}

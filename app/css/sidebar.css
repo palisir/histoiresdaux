@@ -1,0 +1,377 @@
+/*css de la barre latérale*/
+
+.widget-title {
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/*barre de recherche */
+
+.widget-search {
+  height: 27px;
+}
+
+.widget_search span {
+  display: none;
+}
+
+.widget_search .search-field {
+  width: 227px;
+  height: 27px;
+}
+
+input.search-field {
+  font-family: Merriweather;
+  font-size: 1em;
+  padding-left: 5px;
+}
+/*l'auteur*/
+
+.img-auteur {
+  margin: 0 5px 10px 0;
+}
+
+.auteur-resume {
+  text-align: center;
+  font-size: 14px;
+}
+
+.auteur-resume-content {
+  margin-bottom: 8px;
+}
+
+/*réseaux sociaux*/
+
+.social-list {
+  display: inline-block;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 0;
+  margin: 20px 0 22px 0;
+}
+
+.social-icon {
+  display: inline-block;
+}
+
+.social-icon a {
+  width: 50px;
+  height: 50px;
+  vertical-align: top;
+  background: url("../images/sprite-sociaux.png") no-repeat;
+  display: inline-block;
+}
+
+#facebook a {
+  background-position: 0 0;
+}
+
+#twitter a {
+  background-position: -50px 0px;
+  margin-left: 17px;
+}
+
+#google a {
+  background-position: -100px 0px;
+  margin-left: 17px;
+}
+
+#rss a {
+  background-position: -150px 0px;
+  margin-left: 16px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2) {
+  .social-icon a {
+    background: url("../images/sprite-sociaux@2x.png") no-repeat;
+    background-size: 200px;
+  }
+}
+
+/*FT Calendar*/
+#ftcalendar-div {
+  border: none;
+  background-color: #901819;
+}
+
+#ftcalendar-nav {
+  padding: 5px 0 8px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.thumb #ftcalendar-nav #ftcalendar-current {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#ftcalendar-div {
+  position: relative;
+}
+#ftcalendar-prev,
+#ftcalendar-next,
+#ftcalendar-current {
+  position: absolute;
+}
+#ftcalendar-prev {
+  left: 6%;
+}
+#ftcalendar-next {
+  right: 6%;
+}
+#ftcalendar-current {
+  left: 18%;
+  width: 64%;
+  text-align: center;
+  font-family: Merriweather;
+  line-height: 18px;
+}
+
+#ftcalendar-prev,
+#ftcalendar-next {
+  width: 6%;
+  height: 20px;
+  display: inline-block;
+  margin: 0 6%;
+}
+#ftcalendar-prev a,
+#ftcalendar-next a {
+  color: transparent;
+  width: 100%;
+  display: block;
+  height: 20px;
+}
+
+#ftcalendar-prev a {
+  background: url(../images/fleche-gauche.svg) no-repeat;
+  background-size: 16px 20px;
+}
+
+#ftcalendar-next a {
+  background: url(../images/fleche-droite.svg) no-repeat;
+  background-size: 16px 20px;
+}
+
+.thumb #ftcalendar-table {
+  background-color: #242321;
+  border-spacing: 0;
+}
+
+#ftcalendar-table tr,
+.ftcalendar-event-date {
+  height: 36px;
+  font-size: 14px;
+}
+
+#ftcalendar-table tr th {
+  background-color: #901819;
+}
+
+#ftcalendar-table tr th#ftcalendar-headings {
+  color: #f5c566;
+  font-weight: 500;
+  font-family: Merriweather;
+  font-size: 15px;
+}
+
+#ftcalendar-table tr td.current_day {
+  background-color: #666666;
+  text-decoration: underline;
+}
+
+.month #ftcalendar-table tr th,
+.month #ftcalendar-table tr td,
+.week #ftcalendar-table tr th,
+.week #ftcalendar-table tr td,
+.thumb #ftcalendar-table tr th,
+.thumb #ftcalendar-table tr td {
+  border: none;
+}
+
+.ftcalendar-event-date {
+  background-color: #666666;
+  color: #fffdf9;
+}
+
+.unmonth {
+  background-color: #3e3e3d;
+  color: #3e3e3d;
+}
+
+.thumb .ftcalendar-event-date span.thumb-event {
+  color: #901819;
+}
+
+.thumb .ftcalendar-event-date span.thumb-event.unmonth {
+  color: #666666;
+}
+
+.thumb #ftcalendar-table tr td.ftcalendar-event-date {
+  border-left: 1px solid #242321;
+  border-top: 1px solid #242321;
+}
+
+.thumb #ftcalendar-table tr td.ftcalendar-event-date:first-child {
+  border-left: none;
+}
+
+#ftcalendar-table tr:first-child {
+  height: 24px;
+}
+
+.ftcalendar-event-date:first-child,
+.ftcalendar-event-date:last-child {
+  width: 35px;
+}
+
+/*FT List*/
+.ftlistcalendar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.date-event {
+  color: #ababac;
+  text-transform: capitalize;
+}
+
+.date-event,
+.event-title {
+  font-size: 14px;
+}
+
+.event-title {
+  width: 160px;
+}
+
+.event-title,
+.event-link {
+  display: inline-block;
+}
+
+.event-link {
+  font-size: 12px;
+  font-family: Helvetica, sans-serif;
+  float: right;
+  color: #901819;
+  position: relative;
+  top: 5px;
+}
+
+/*Specifique mobile*/
+
+@media (max-width: 991px) {
+  .widget-title {
+    margin: 20px 0;
+    font-size: 32px;
+  }
+
+  /*widget search*/
+
+  input.search-field {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  /*Icones Reseaux*/
+  .social-list {
+    margin: 7% 6.67% 0 6.67%;
+    width: 100%;
+    display: block;
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+  }
+
+  .social-icon {
+    display: list-item;
+  }
+
+  #twitter a,
+  #google a,
+  #rss a {
+    margin-left: 0;
+  }
+
+  /*FT Calendar*/
+  #ftcalendar-nav {
+    padding-top: 7px;
+  }
+
+  #ftcalendar-table tr th#ftcalendar-headings {
+    font-size: 20px;
+    padding-bottom: 4px;
+  }
+
+  #ftcalendar-table tr,
+  .ftcalendar-event-date {
+    font-size: 20px;
+    height: auto;
+  }
+
+  .thumb #ftcalendar-nav #ftcalendar-current {
+    font-size: 18px;
+  }
+
+  .thumb #ftcalendar-table tr td {
+    height: 43px;
+  }
+
+  .ftcalendar-event-date:first-child,
+  .ftcalendar-event-date:last-child {
+    width: auto;
+    height: auto;
+  }
+
+  /*FT List*/
+  #ftcalendar-list-div {
+    display: none;
+  }
+
+  /*Encart Facebook*/
+
+  #custom_post_widget-2 {
+    text-align: center;
+  }
+
+  /*l'auteur*/
+
+  .encart-auteur {
+    margin: 0 6.67%;
+    text-align: center;
+  }
+
+  .img-auteur {
+    margin: 0 0 20px 0;
+  }
+
+  .auteur-resume {
+    text-align: left;
+    font-size: 22px;
+  }
+
+  .auteur-resume-content {
+    margin-bottom: 0;
+  }
+
+  .auteur-readmore {
+    margin-top: 10px;
+  }
+
+  .auteur-resume p {
+    text-align: right;
+  }
+
+  /*disposition speciale mobile*/
+
+  #secondary {
+    display: table;
+  }
+
+  #secondary #custom_post_widget-3 {
+    display: table-footer-group;
+  }
+}
