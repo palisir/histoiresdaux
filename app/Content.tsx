@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Content = () => {
   return (
     <>
@@ -81,13 +83,13 @@ const Content = () => {
               <div className="centre-image"></div>
               <div className="entry-content">
                 <p>
-                  <img
+                  <Image
                     src="https://www.histoiresdaux.fr/wp-content/uploads/la-fille-aux-amulettes.jpg"
                     title="La fille aux amulettes"
                     alt="La fille aux amulettes"
                     id="bigpic"
-                    width="350"
-                    height="490"
+                    width={"350"}
+                    height={"490"}
                   />
                   <br />
                   On peut la retrouver, et moi avec, ici et là…

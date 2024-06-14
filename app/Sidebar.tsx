@@ -1,3 +1,6 @@
+import Image from "next/image";
+import auteur from "./images/auteur.jpg";
+
 const Sidebar = () => {
   return (
     <aside id="secondary" className="sidebar widget-area" role="complementary">
@@ -30,12 +33,12 @@ const Sidebar = () => {
       >
         <h2 className="widget-title">L&rsquo;auteur :</h2>
         <div className="encart-auteur">
-          <img
-            className="img-auteur alignnone size-full wp-image-104"
-            src="https://www.histoiresdaux.fr/wp-content/uploads/2016/06/auteur.jpg"
+          <Image
+            src={auteur}
             alt="auteur"
-            width="240"
-            height="250"
+            width={240}
+            height={250}
+            className="img-auteur alignnone size-full wp-image-104"
           />
           <div className="auteur-resume">
             <div className="auteur-resume-content">
