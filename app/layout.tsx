@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+import Footer from "./Footer";
+
+import "./css/style.css";
 
 const merriweather = Merriweather({
   style: ["normal", "italic"],
@@ -20,7 +25,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={bodyClasses}>{children}</body>
+      <body className={bodyClasses}>
+        <div id="page" className="site">
+          <div className="site-inner">
+            <Header />
+            <div id="content" className="site-content">
+              <div id="primary" className="content-area">
+                <main id="main" className="site-main" role="main">
+                  {children}{" "}
+                </main>
+              </div>
+              <Sidebar />
+
+              <hr className="clear" />
+            </div>
+            <Footer />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
