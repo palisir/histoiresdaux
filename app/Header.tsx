@@ -1,4 +1,16 @@
+"use client";
+
+import { useRef, useState } from "react";
+
 const Header = () => {
+  const siteMenuHeaderRef = useRef(null);
+  const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+
+  const handleBurgerMenuClick = (e) => {
+    e.preventDefault();
+    setShowBurgerMenu(!showBurgerMenu);
+  };
+
   return (
     <header id="masthead" className="site-header" role="banner">
       <div className="site-header-main">
@@ -9,14 +21,16 @@ const Header = () => {
             </a>
           </h1>
         </div>
-        <div className="burger-icon">
+        <div className="burger-icon" onClick={handleBurgerMenuClick}>
           <span className="barre-burger"></span>
           <span className="barre-burger"></span>
           <span className="barre-burger"></span>
         </div>
         <div
           id="site-header-menu"
+          ref={siteMenuHeaderRef}
           className="site-header-menu"
+          style={{ display: showBurgerMenu ? "block" : "none" }}
           // style={{ display: "none" }}
         >
           <nav
