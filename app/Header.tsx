@@ -6,7 +6,7 @@ const Header = () => {
   const siteMenuHeaderRef = useRef(null);
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
 
-  const handleBurgerMenuClick = (e) => {
+  const handleBurgerMenuClick = (e: any) => {
     e.preventDefault();
     setShowBurgerMenu(!showBurgerMenu);
   };
@@ -29,9 +29,7 @@ const Header = () => {
         <div
           id="site-header-menu"
           ref={siteMenuHeaderRef}
-          className="site-header-menu"
-          style={{ display: showBurgerMenu ? "block" : "none" }}
-          // style={{ display: "none" }}
+          className={`site-header-menu${showBurgerMenu ? " unwrapped" : ""}`}
         >
           <nav
             id="site-navigation"
@@ -62,27 +60,6 @@ const Header = () => {
               </ul>
             </div>{" "}
           </nav>
-          <div className="header-widget">
-            <form
-              role="search"
-              method="get"
-              className="search-form"
-              action="https://www.histoiresdaux.fr/"
-            >
-              <input
-                type="search"
-                className="search-field"
-                placeholder="Recherche"
-                value=""
-                name="s"
-              />
-              <button
-                type="submit"
-                id="header-search-button"
-                className="search-submit"
-              ></button>
-            </form>
-          </div>
           <hr className="clear" />
         </div>
       </div>
