@@ -2,8 +2,12 @@ import { getPostBySlug } from "@/lib/contentful";
 import { notFound } from "next/navigation";
 import { richTextDoc } from "@/app/utils/post";
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = await params;
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const slug = (await params).slug;
   const post = await getPostBySlug(slug);
 
   if (!post) {
