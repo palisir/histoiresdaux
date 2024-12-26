@@ -12,9 +12,7 @@
     "@contentful/rich-text-plain-text-renderer": "^17.0.0",
     "@contentful/rich-text-react-renderer": "^15.17.1",
     "@contentful/rich-text-types": "^16.2.1",
-    "cf-content-types-generator": "^2.15.5",
     "contentful": "latest",
-    "contentful-import": "^9.0.4",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -25,7 +23,6 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
-    "sass": "^1.77.5",
     "typescript": "^5"
   }
 }
