@@ -35,7 +35,7 @@ export const richTextDoc = (content: Document) => {
           <Image
             title={imgProps.title}
             alt={imgProps.description}
-            src={`https://${imgProps.file.url}`}
+            src={`https:${imgProps.file.url}`}
             width={imgProps.file.details.image.width}
             height={imgProps.file.details.image.height}
           />
