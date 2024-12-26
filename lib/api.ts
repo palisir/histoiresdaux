@@ -1,29 +1,43 @@
 import { createClient } from "contentful";
 import { Document } from "@contentful/rich-text-types";
-import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
+import type {
+  ChainModifiers,
+  Entry,
+  EntryFieldTypes,
+  EntrySkeletonType,
+  LocaleCode,
+} from "contentful";
 
 export interface ITypePostFields {
-    title: EntryFieldTypes.Symbol;
-    content: EntryFieldTypes.RichText;
-    publishDate: EntryFieldTypes.Date;
-    slug: EntryFieldTypes.Symbol;
+  title: EntryFieldTypes.Symbol;
+  content: EntryFieldTypes.RichText;
+  publishDate: EntryFieldTypes.Date;
+  slug: EntryFieldTypes.Symbol;
 }
 
 export type TypePostSkeleton = EntrySkeletonType<ITypePostFields, "post">;
-export type TypePost<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<TypePostSkeleton, Modifiers, Locales>;
+export type TypePost<
+  Modifiers extends ChainModifiers,
+  Locales extends LocaleCode = LocaleCode
+> = Entry<TypePostSkeleton, Modifiers, Locales>;
 
 export interface ITypeStaticPageFields {
-    title: EntryFieldTypes.Symbol;
-    slug: EntryFieldTypes.Symbol;
-    content: EntryFieldTypes.RichText;
-    publishedDate: EntryFieldTypes.Date;
-    metaTitle?: EntryFieldTypes.Symbol;
-    metaDescription?: EntryFieldTypes.RichText;
+  title: EntryFieldTypes.Symbol;
+  slug: EntryFieldTypes.Symbol;
+  content: EntryFieldTypes.RichText;
+  publishedDate: EntryFieldTypes.Date;
+  metaTitle?: EntryFieldTypes.Symbol;
+  metaDescription?: EntryFieldTypes.RichText;
 }
 
-export type TypeStaticPageSkeleton = EntrySkeletonType<ITypeStaticPageFields, "static-page">;
-export type TypeStaticPage<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<TypeStaticPageSkeleton, Modifiers, Locales>;
-
+export type TypeStaticPageSkeleton = EntrySkeletonType<
+  ITypeStaticPageFields,
+  "static-page"
+>;
+export type TypeStaticPage<
+  Modifiers extends ChainModifiers,
+  Locales extends LocaleCode = LocaleCode
+> = Entry<TypeStaticPageSkeleton, Modifiers, Locales>;
 
 const client = createClient({
   space: process.env.VITE_CONTENTFUL_SPACE_ID!,
@@ -80,9 +94,10 @@ export async function getAllPosts() {
       content_type: "post",
       limit: 12,
       include: 1,
+      order: ["-fields.publishDate"],
     });
 
-    return response.items
+    return response.items;
   } catch (error) {
     console.error("Error fetching static page:", error);
     throw error;
