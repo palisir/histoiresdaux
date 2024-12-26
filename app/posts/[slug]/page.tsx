@@ -1,4 +1,4 @@
-import { getPostBySlug } from "@/lib/api";
+import { getPostBySlug } from "@/lib/contentful";
 import { notFound } from "next/navigation";
 import { richTextDoc } from "@/app/utils/post";
 

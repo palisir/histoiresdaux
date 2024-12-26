@@ -2,7 +2,6 @@ import { documentToPlainTextString } from "@contentful/rich-text-plain-text-rend
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Document } from "@contentful/rich-text-types";
 import { BLOCKS } from "@contentful/rich-text-types";
-import { EntryFieldTypes } from "contentful";
 import Image from "next/image";
 
 export const postDateFormat = (date: Date | string) => {

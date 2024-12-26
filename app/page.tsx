@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { getAllPosts } from "@/lib/api";
+import { getAllPosts } from "@/lib/contentful";
 import PostPreview from "./PostPreview";
 
 export default async function Page() {

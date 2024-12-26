@@ -1,5 +1,3 @@
-import { usePathname } from "next/navigation";
-import { useState } from "react";
 import AuthorWidget from "./AuthorWidget";
 
 const Sidebar = () => {
@@ -15,7 +13,7 @@ const Sidebar = () => {
               <a href="https://www.facebook.com/Histoires-Daux-1004847796266965/"></a>
             </li>
             <li id="rss" className="social-icon">
-              <a href="http://www.histoiredaux.fr/feed/"></a>
+              <a href="/feed/"></a>
             </li>
           </ul>
           <hr className="clear" />

@@ -30,7 +30,6 @@ export default function PostPreview(props: any) {
       <div className="post-entier">
         <div className="centre-image"></div>
         <div className="entry-content">
-          {/* TODO: post excerpt */}
           {extractExcerpt(props.post.fields.content)}
           <p>
             <a className="more-link" href={postUrl}>

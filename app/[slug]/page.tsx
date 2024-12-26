@@ -1,4 +1,4 @@
-import { getStaticPageBySlug } from "@/lib/api";
+import { getStaticPageBySlug } from "@/lib/contentful";
 import { notFound } from "next/navigation";
 import { richTextDoc } from "../utils/post";
 
