@@ -27,18 +27,18 @@ input.search-field {
   font-size: 1em;
   padding-left: 5px;
 }
-/*l'auteur*/
+/*l'auteure*/
 
-.img-auteur {
+.img-auteure {
   margin: 0 5px 10px 0;
 }
 
-.auteur-resume {
+.auteure-resume {
   text-align: center;
   font-size: 14px;
 }
 
-.auteur-resume-content {
+.auteure-resume-content {
   margin-bottom: 8px;
 }
 
@@ -337,31 +337,31 @@ input.search-field {
     text-align: center;
   }
 
-  /*l'auteur*/
+  /*l'auteure*/
 
-  .encart-auteur {
+  .encart-auteure {
     margin: 0 6.67%;
     text-align: center;
   }
 
-  .img-auteur {
+  .img-auteure {
     margin: 0 0 20px 0;
   }
 
-  .auteur-resume {
+  .auteure-resume {
     text-align: left;
     font-size: 22px;
   }
 
-  .auteur-resume-content {
+  .auteuer-resume-content {
     margin-bottom: 0;
   }
 
-  .auteur-readmore {
+  .auteure-readmore {
     margin-top: 10px;
   }
 
-  .auteur-resume p {
+  .auteure-resume p {
     text-align: right;
   }
 

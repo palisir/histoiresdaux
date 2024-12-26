@@ -16,7 +16,7 @@ const Header = () => {
       <div className="site-header-main">
         <div className="site-branding">
           <h1 className="site-title">
-            <a href="https://www.histoiresdaux.fr/" rel="home">
+            <a href="/" rel="home">
               Histoires Daux
             </a>
           </h1>
@@ -43,22 +43,22 @@ const Header = () => {
                   id="menu-item-32"
                   className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-32"
                 >
-                  <a href="https://www.histoiresdaux.fr/">Accueil</a>
+                  <a href="/">Accueil</a>
                 </li>
                 <li
                   id="menu-item-35"
                   className="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"
                 >
-                  <a href="https://www.histoiresdaux.fr/a-propos/">À propos</a>
+                  <a href="/a-propos/">À propos</a>
                 </li>
                 <li
                   id="menu-item-31"
                   className="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"
                 >
-                  <a href="https://www.histoiresdaux.fr/contact/">Contact</a>
+                  <a href="/contact/">Contact</a>
                 </li>
               </ul>
-            </div>{" "}
+            </div>
           </nav>
           <hr className="clear" />
         </div>

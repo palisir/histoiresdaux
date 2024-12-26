@@ -229,11 +229,6 @@
   font-size: 14px;
 }
 
-.menu-navigation-footer-container {
-  margin: 0 35px 15px 0;
-  position: relative;
-  bottom: 32px;
-}
 
 /*page Contact */
 .wpcf7-form p {
@@ -264,17 +259,13 @@
 }
 
 /*footer*/
-
-.menu-navigation-footer-container {
-  float: right;
+.menu-navigation-footer-container ul {
+  display: flex;
+  justify-content: center;
 }
 
-.menu-navigation-footer-container li::before {
+.menu-navigation-footer-container li:not(:first-child)::before {
   content: " - ";
-}
-
-.menu-navigation-footer-container li:first-child::before {
-  content: " ";
 }
 
 @media (max-width: 991px) {

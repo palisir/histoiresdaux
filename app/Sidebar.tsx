@@ -14,12 +14,6 @@ const Sidebar = () => {
             <li id="facebook" className="social-icon">
               <a href="https://www.facebook.com/Histoires-Daux-1004847796266965/"></a>
             </li>
-            <li id="twitter" className="social-icon">
-              <a href="#"></a>
-            </li>
-            <li id="google" className="social-icon">
-              <a href="#"></a>
-            </li>
             <li id="rss" className="social-icon">
               <a href="http://www.histoiredaux.fr/feed/"></a>
             </li>

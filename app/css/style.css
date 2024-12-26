@@ -157,6 +157,10 @@
   color: #fffdf9;
 }
 
+.menu-navigation-footer-container ul {
+  padding-left: 0;
+}
+
 .menu-navigation-footer-container li {
   padding: 0;
 }
