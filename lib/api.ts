@@ -1,5 +1,4 @@
 import { createClient } from "contentful";
-import { Document } from "@contentful/rich-text-types";
 import type {
   ChainModifiers,
   Entry,
