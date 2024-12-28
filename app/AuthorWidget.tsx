@@ -8,7 +8,7 @@ const AuthorWidget = () => {
       id="custom_post_widget-4"
       className="widget widget_custom_post_widget"
     >
-      <h2 className="widget-title">L&rsquo;auteur :</h2>
+      <h2 className="widget-title">L&rsquo;auteure :</h2>
       <div className="encart-auteure">
         <Image
           src={auteure}

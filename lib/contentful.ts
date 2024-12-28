@@ -7,20 +7,20 @@ import type {
   LocaleCode,
 } from "contentful";
 
-export interface ITypePostFields {
+interface ITypePostFields {
   title: EntryFieldTypes.Symbol;
   content: EntryFieldTypes.RichText;
   publishDate: EntryFieldTypes.Date;
   slug: EntryFieldTypes.Symbol;
 }
 
-export type TypePostSkeleton = EntrySkeletonType<ITypePostFields, "post">;
-export type TypePost<
+type TypePostSkeleton = EntrySkeletonType<ITypePostFields, "post">;
+type TypePost<
   Modifiers extends ChainModifiers,
   Locales extends LocaleCode = LocaleCode
 > = Entry<TypePostSkeleton, Modifiers, Locales>;
 
-export interface ITypeStaticPageFields {
+interface ITypeStaticPageFields {
   title: EntryFieldTypes.Symbol;
   slug: EntryFieldTypes.Symbol;
   content: EntryFieldTypes.RichText;
@@ -29,11 +29,11 @@ export interface ITypeStaticPageFields {
   metaDescription?: EntryFieldTypes.RichText;
 }
 
-export type TypeStaticPageSkeleton = EntrySkeletonType<
+type TypeStaticPageSkeleton = EntrySkeletonType<
   ITypeStaticPageFields,
   "static-page"
 >;
-export type TypeStaticPage<
+type TypeStaticPage<
   Modifiers extends ChainModifiers,
   Locales extends LocaleCode = LocaleCode
 > = Entry<TypeStaticPageSkeleton, Modifiers, Locales>;
@@ -63,29 +63,6 @@ const CONTENT_GRAPHQL_FIELDS = `
     }
   }
 `;
-
-async function fetchGraphQL(query: string): Promise<any> {
-  return fetch(
-    `https://graphql.contentful.com/content/v1/spaces/${process.env.VITE_CONTENTFUL_SPACE_ID}`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.VITE_CONTENTFUL_ACCESS_TOKEN}`,
-      },
-      body: JSON.stringify({ query }),
-      next: { tags: ["posts"] },
-    }
-  ).then((response) => response.json());
-}
-
-function extractPost(fetchResponse: any): any {
-  return fetchResponse?.data?.postCollection?.items?.[0];
-}
-
-function extractPostEntries(fetchResponse: any): any[] {
-  return fetchResponse?.data?.postCollection?.items;
-}
 
 export async function getAllPosts() {
   try {
@@ -132,7 +109,6 @@ export async function getPostBySlug(slug: string) {
       include: 1,
     });
 
-    // Return null if no entry is found
     if (response.items.length === 0) {
       return null;
     }
