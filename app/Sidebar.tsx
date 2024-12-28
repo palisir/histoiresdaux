@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AuthorWidget from "./AuthorWidget";
 
 const Sidebar = () => {
@@ -10,10 +11,10 @@ const Sidebar = () => {
         <div className="social-links">
           <ul className="social-list">
             <li id="facebook" className="social-icon">
-              <a href="https://www.facebook.com/Histoires-Daux-1004847796266965/"></a>
+              <Link href="https://www.facebook.com/Histoires-Daux-1004847796266965/"></Link>
             </li>
             <li id="rss" className="social-icon">
-              <a href="/feed/"></a>
+              <Link href="/feed/"></Link>
             </li>
           </ul>
           <hr className="clear" />

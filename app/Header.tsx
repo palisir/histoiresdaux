@@ -1,6 +1,16 @@
 "use client";
 
-import { useRef, useState } from "react";
+import Link, { LinkProps } from "next/link";
+import { usePathname } from "next/navigation";
+import { PropsWithChildren, useRef, useState } from "react";
+
+// const ActiveLink = ({ children, ...props }: PropsWithChildren<LinkProps>) => {
+//   const pathname = usePathname();
+//   className = `${props.className}}`
+//     pathname == "/" ? "current-menu-item current_page_item" : ""
+//   }`
+//   return <Link {...props}>{children}</Link>;
+// };
 
 const Header = () => {
   const siteMenuHeaderRef = useRef(null);
@@ -11,14 +21,16 @@ const Header = () => {
     setShowBurgerMenu(!showBurgerMenu);
   };
 
+  const pathname = usePathname();
+
   return (
     <header id="masthead" className="site-header" role="banner">
       <div className="site-header-main">
         <div className="site-branding">
           <h1 className="site-title">
-            <a href="/" rel="home">
+            <Link href="/" rel="home">
               Histoires Daux
-            </a>
+            </Link>
           </h1>
         </div>
         <div className="burger-icon" onClick={handleBurgerMenuClick}>
@@ -40,22 +52,34 @@ const Header = () => {
             <div className="menu-navigation-container">
               <ul id="menu-navigation" className="primary-menu">
                 <li
-                  id="menu-item-32"
-                  className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-32"
+                  className={`menu-item menu-item-type-custom menu-item-object-custom menu-item-home\
+                    ${
+                      pathname == "/"
+                        ? " current-menu-item current_page_item"
+                        : ""
+                    }`}
                 >
-                  <a href="/">Accueil</a>
+                  <Link href="/">Accueil</Link>
                 </li>
                 <li
-                  id="menu-item-35"
-                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"
+                  className={`menu-item menu-item-type-post_type menu-item-object-page\
+                    ${
+                      pathname == "/a-propos"
+                        ? " current-menu-item current_page_item"
+                        : ""
+                    }`}
                 >
-                  <a href="/a-propos/">À propos</a>
+                  <Link href="/a-propos">À propos</Link>
                 </li>
                 <li
-                  id="menu-item-31"
-                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"
+                  className={`menu-item menu-item-type-post_type menu-item-object-page\
+                    ${
+                      pathname == "/contact"
+                        ? " current-menu-item current_page_item"
+                        : ""
+                    }`}
                 >
-                  <a href="/contact/">Contact</a>
+                  <Link href="/contact/">Contact</Link>
                 </li>
               </ul>
             </div>

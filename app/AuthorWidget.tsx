@@ -1,5 +1,6 @@
 import Image from "next/image";
 import auteure from "./images/auteure.jpg";
+import Link from "next/link";
 
 const AuthorWidget = () => {
   return (
@@ -24,9 +25,9 @@ const AuthorWidget = () => {
             Strasbourg où elle vit depuis plus de 30 ans.{" "}
           </div>
           <p>
-            <a className="auteure-readmore" href="/a-propos/">
+            <Link className="auteure-readmore" href="/a-propos/">
               En savoir plus →
-            </a>
+            </Link>
           </p>
         </div>
       </div>

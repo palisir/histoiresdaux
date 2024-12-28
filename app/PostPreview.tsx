@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { extractExcerpt, postDateFormat } from "./utils/post";
 
 export default function PostPreview(props: any) {
@@ -11,19 +12,19 @@ export default function PostPreview(props: any) {
     >
       <header className="entry-header">
         <h2 className="entry-title">
-          <a href={postUrl} rel="bookmark">
+          <Link href={postUrl} rel="bookmark">
             {props.post.fields.title}
-          </a>
+          </Link>
         </h2>
         <span className="posted-on">
-          <a href={postUrl} rel="bookmark">
+          <Link href={postUrl} rel="bookmark">
             <time
               className="entry-date published updated"
               dateTime="{props.post.fields.publishDate}"
             >
               {postDateFormat(props.post.fields.publishDate)}
             </time>
-          </a>
+          </Link>
         </span>
         <div className="edit-post"></div>
       </header>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer id="colophon" className="site-footer" role="contentinfo">
@@ -8,29 +10,17 @@ const Footer = () => {
       >
         <div className="menu-navigation-footer-container">
           <ul id="menu-navigation-footer" className="pouet-menu">
-            <li
-              id="menu-item-38"
-              className="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"
-            >
-              <a href="/">Accueil</a>
+            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-38">
+              <Link href="/">Accueil</Link>
             </li>
-            <li
-              id="menu-item-36"
-              className="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"
-            >
-              <a href="/a-propos/">À propos</a>
+            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-36">
+              <Link href="/a-propos/">À propos</Link>
             </li>
-            <li
-              id="menu-item-37"
-              className="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"
-            >
-              <a href="/contact/">Contact</a>
+            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-37">
+              <Link href="/contact/">Contact</Link>
             </li>
-            <li
-              id="menu-item-41"
-              className="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"
-            >
-              <a href="/mentions-legales/">Mentions Légales</a>
+            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-41">
+              <Link href="/mentions-legales/">Mentions Légales</Link>
             </li>
           </ul>
         </div>
