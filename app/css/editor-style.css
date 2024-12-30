@@ -5,6 +5,7 @@ body {
   font-family: Merriweather !important;
   background: url(../images/bois-vosgiens.jpg) no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 h1 {
